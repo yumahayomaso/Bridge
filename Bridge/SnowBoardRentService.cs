@@ -2,15 +2,16 @@
 {
     public class SnowBoardRentService
     {
-        private ISnowboardRental _snowboardRental;
+        private SkiMuneris _snowboardRental;
         private int _boardsToRentCount;
+
 
         public SnowBoardRentService()
         {
             _snowboardRental = new UsualSnowboardRental();
         }
 
-        public ISnowboardRental SnowboardRental
+        public SkiMuneris SnowboardRental
         {
             set => _snowboardRental = value;
         }
@@ -22,8 +23,8 @@
 
         public int GetTotalPrice()
         {
-            var boardPrice = _snowboardRental.GetSnowboardRentPrice();
-            var setupPrice = _snowboardRental.GetSnowboardSetupPrice();
+            var boardPrice = _snowboardRental.GetBoardPrice();
+            var setupPrice = _snowboardRental.GetBoardSetupPrice();
 
             return _boardsToRentCount * (boardPrice + setupPrice);
         }

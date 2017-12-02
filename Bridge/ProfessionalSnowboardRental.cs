@@ -1,15 +1,15 @@
 ﻿namespace Bridge
 {
-    public class ProfessionalSnowboardRental : ISnowboardRental
+    public class ProfessionalSnowboardRental : SkiMuneris
     {
-        public int GetSnowboardRentPrice()
+        public override int GetBoardPrice()
         {
             return 50;
         }
 
-        public int GetSnowboardSetupPrice()
+        public override int GetBoardSetupPrice()
         {
-            return 30;
+            return 50;
         }
     }
 }

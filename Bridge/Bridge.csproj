@@ -46,6 +46,7 @@
     <Compile Include="ProfessionalSnowboardRental.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkiMuneris.cs" />
     <Compile Include="SnowBoardRentService.cs" />
     <Compile Include="UsualSnowboardRental.cs" />
   </ItemGroup>

@@ -1,15 +1,24 @@
 ﻿namespace Bridge
 {
-    public class UsualSnowboardRental : ISnowboardRental
+    public class UsualSnowboardRental : SkiMuneris
     {
-        public int GetSnowboardRentPrice()
+        public UsualSnowboardRental()
         {
-            return 30;
+            Direction = Direction.Left;
+        }
+        public override int GetBoardPrice()
+        {
+            var price = 0;
+            if (Direction == Direction.Left)
+            {
+                price += 20;
+            }
+            return 50;
         }
 
-        public int GetSnowboardSetupPrice()
+        public override int GetBoardSetupPrice()
         {
-            return 10;
+            return 30;
         }
     }
 }

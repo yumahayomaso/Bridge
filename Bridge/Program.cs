@@ -6,7 +6,7 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
-            var rentService = new SnowBoardRentService();
+            var rentService = new SnowBoardRentService { SnowboardRental = new UsualSnowboardRental() };
             var boardsToRent = 12;
             rentService.AddSnowboardCount(boardsToRent);
             var totalPrice = rentService.GetTotalPrice();
